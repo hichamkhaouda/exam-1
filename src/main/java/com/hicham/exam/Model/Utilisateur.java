@@ -11,15 +11,15 @@ public class Utilisateur {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String fullName;
+    private String fullname;
     private String email;
 
     public Utilisateur() {
     }
 
-    public Utilisateur(Long id, String fullName, String email) {
+    public Utilisateur(Long id, String fullname, String email) {
         this.id = id;
-        this.fullName = fullName;
+        this.fullname = fullname;
         this.email = email;
     }
 
@@ -32,11 +32,11 @@ public class Utilisateur {
     }
 
     public String getFullName() {
-        return fullName;
+        return fullname;
     }
 
     public void setFullName(String fullName) {
-        this.fullName = fullName;
+        this.fullname = fullName;
     }
 
     public String getEmail() {
@@ -45,5 +45,14 @@ public class Utilisateur {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Utilisateur{" +
+                "id=" + id +
+                ", fullname='" + fullname + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
